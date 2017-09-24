@@ -1,4 +1,8 @@
 #!/usr/bin/python
+'''
+ unsparse.py
+ Copyright (C) 2017  Nathan Rennie-Waldock <nathan.renniewaldock@gmail.com>
+'''
 import xml.etree.ElementTree as ET
 from natsort import natsorted
 
@@ -75,7 +79,10 @@ def copyfileobj (fsrc, fdst, bufsize=16384, filesize=None):
 	print
 
 if __name__ == '__main__':
-	parser = argparse.ArgumentParser()
+	parser = argparse.ArgumentParser(description="Copyright (C) 2017  Nathan Rennie-Waldock <nathan.renniewaldock@gmail.com>\n"
+												 "This program comes with ABSOLUTELY NO WARRANTY;\n"
+												 "This is free software, and you are welcome to redistribute it\n"
+												 "under certain conditions.", formatter_class=argparse.RawTextHelpFormatter)
 	parser.add_argument("-x", "--xml", type=is_file, default="rawprogram0.xml", help="XML file to parse for partitions (default: rawprogram0.xml)")
 	group = parser.add_mutually_exclusive_group()
 	group.add_argument("-p", "--partition", type=str, default="", help="Partition to assemble (default: all)")
