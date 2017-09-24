@@ -78,7 +78,7 @@ def copyfileobj (fsrc, fdst, bufsize=16384, filesize=None):
             lastprogress = progress
     print
 
-if __name__ == '__main__':
+def main():
     parser = argparse.ArgumentParser(description="Copyright (C) 2017  Nathan Rennie-Waldock <nathan.renniewaldock@gmail.com>\n"
                                                  "This program comes with ABSOLUTELY NO WARRANTY;\n"
                                                  "This is free software, and you are welcome to redistribute it\n"
@@ -154,3 +154,6 @@ if __name__ == '__main__':
 
                     print "%s: %s, start %d" % (label, part["filename"], (part["start_sector"] - partition_start))
 
+
+if __name__ == '__main__':
+    main()
