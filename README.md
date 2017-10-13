@@ -2,7 +2,7 @@
 Tool to reassemble the sparse images used by Qualcomm Flash Image Loader
 
 ```
-usage: unsparse.py [-h] [-x XML] [-p PARTITION | -l] [-o DIRECTORY]
+usage: qfil-unsparse [-h] [-x XML] [-p PARTITION | -l] [-o DIRECTORY]
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -15,9 +15,23 @@ optional arguments:
                         Output directory (default: Current directory)
 ```
 
-Running `unsparse.py` with no arguments will extract all sparse partitions from the firmware described in `rawprogram0.xml` located in the current directory.
+Running `qfil-unsparse` with no arguments will extract all sparse partitions from the firmware described in `rawprogram0.xml` located in the current directory.
 
 
 This has been tested working on the Lenovo Tab4 8 Plus firmware.
 
 If you've got another firmware using QFIL that this tool can't reassemble, open an issue providing a download link.
+
+
+---
+
+
+
+### Installation
+
+
+You can either:
+
+&nbsp;&nbsp;&nbsp;&nbsp;a. Clone this repo  
+&nbsp;&nbsp;&nbsp;&nbsp;b. Install using pip: `pip install git+https://github.com/NHellFire/android-qfil-unsparse.git`
+

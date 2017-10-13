@@ -1,6 +1,6 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 '''
- unsparse.py
+ qfil-unsparse
  Copyright (C) 2017  Nathan Rennie-Waldock <nathan.renniewaldock@gmail.com>
 '''
 import xml.etree.ElementTree as ET
